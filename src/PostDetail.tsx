@@ -41,7 +41,7 @@ const PostDetail = () => {
   const navigate = useNavigate();
   let [FetchedPostData, setfetchedPostData] = useState<Post>();
   useEffect(() => {
-    fetch(`http://hn.algolia.com/api/v1/items/${id}`)
+    fetch(`https://hn.algolia.com/api/v1/items/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setfetchedPostData(data);

@@ -39,7 +39,7 @@ const HomePage = () => {
   let [FetchedData, setfetchedData] = useState<ApiDataType>();
   useEffect(() => {
     setLoading(true);
-    fetch(`http://hn.algolia.com/api/v1/search?query=${queryParam}`)
+    fetch(`https://hn.algolia.com/api/v1/search?query=${queryParam}`)
       .then((res) => res.json())
       .then((data) => {
         setfetchedData(data);
